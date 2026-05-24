@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Birthday Maze!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <h1>🎮 Reach the End for a Surprise! 🎮</h1>
+        <p>Use Arrow Keys/WASD on Desktop, or the buttons below on Mobile!</p>
+        
+        <div id="maze-board"></div>
+
+        <div id="controller-pad">
+            <button class="ctrl-btn" id="btn-up">▲</button>
+            <div class="middle-row">
+                <button class="ctrl-btn" id="btn-left">◀</button>
+                <div class="spacer"></div>
+                <button class="ctrl-btn" id="btn-right">▶</button>
+            </div>
+            <button class="ctrl-btn" id="btn-down">▼</button>
+        </div>
+    </div>
+
+    <div id="surprise-screen" class="hidden">
+        <div class="card-content">
+            <h1>SORRY PAPEDTAYAN</h1>
+            <h1>NABUANG LANG</h1>
+            <img src="birthday_photo.jpg" alt="Birthday Celebration" id="bday-pic">
+            <p>Sorry nabuang lang UwU, BTW 84 utang ko kay 94-5-5 kay yung</p>
+            <p>sa ice cream tas another 5 yung sa sukay=84 bayadan ko bo soon✨</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

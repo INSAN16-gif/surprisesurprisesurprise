@@ -1,0 +1,170 @@
+/* ==========================================
+   1. GLOBAL STYLES & RESET
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #12141c;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #47ff5f;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+p {
+    color: #a4b0be;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* ==========================================
+   2. GAME CONTAINER & MAZE BOARD
+   ========================================== */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#maze-board {
+    display: grid;
+    margin: 0 auto;
+    border: 4px solid #ffffff;
+    background-color: #1e222b;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    /* Dynamic Perspective Scaling */
+    width: 90vw;
+    max-width: 450px;
+    aspect-ratio: 1 / 1; /* Keeps it a perfect uniform square */
+}
+
+/* ==========================================
+   3. GRID TILES / CELLS
+   ========================================== */
+.cell {
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.1s ease;
+}
+
+/* Path (0) */
+.path {
+    background-color: #1e222b;
+}
+
+/* Wall (1) */
+.wall {
+    background-color: #747d8c;
+    border: 1px solid #57606f;
+}
+
+/* Player Block (2) */
+.player {
+    background-color: #00d2d3;
+    border-radius: 4px;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Goal Destination (3) */
+.goal {
+    background-color: #ffa502;
+    box-shadow: 0 0 12px #ffa502;
+}
+
+/* ==========================================
+   4. MOBILE ANDROID CONTROLLER D-PAD
+   ========================================== */
+#controller-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    gap: 8px;
+}
+
+.middle-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Pushes left and right arrows apart */
+    align-items: center;
+}
+
+.ctrl-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #2aee03;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent; /* Removes default tap flash on mobile Chrome */
+    transition: transform 0.1s, background-color 0.1s;
+}
+
+.ctrl-btn:active {
+    background-color: #ff6b81;
+    transform: scale(0.9);
+}
+
+.spacer {
+    width: 28px;
+}
+
+/* ==========================================
+   5. BIRTHDAY SURPRISE SCREEN MODAL
+   ========================================== */
+#surprise-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #12141c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.card-content {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #20fa04;
+    box-shadow: 0 0 40px rgba(150, 214, 1, 0.25);
+    max-width: 90%;
+    width: 400px;
+}
+
+#bday-pic {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+    border: 3px solid #ffffff;
+}
+
+/* Utility visibility class toggled by JS */
+.hidden {
+    display: none !important;
+}
