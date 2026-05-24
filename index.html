@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Birthday Maze!</title>
+    <!-- Linking our CSS style sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <body>
+
+    <!-- 1. The Game Screen -->
+    <div id="game-container">
+        <h1>🎮 Reach the End for a Surprise! 🎂</h1>
+        <p>Use the <b>Arrow Keys</b> or <b>WASD</b> to move the blue square to the yellow goal!</p>
+        
+        <!-- The actual maze container -->
+        <div id="maze-board"></div>
+    </div>
+
+    <!-- 2. The Secret Birthday Surprise Screen (Hidden by default) -->
+    <div id="surprise-screen" class="hidden">
+        <div class="card-content">
+            <h1>🎉 HAPPY BIRTHDAY! 🎉</h1>
+            <!-- This will display your dropped-in photo -->
+            <img src="birthday_photo.jpg" alt="Birthday Celebration" id="bday-pic">
+            <p>You conquered the maze! Have an amazing day! ✨</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
